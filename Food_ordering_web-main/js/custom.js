@@ -37,12 +37,12 @@ $(function () {
   function updateTotal() {
     let total = 0;
     $("#cart-content tr").each(function () {
-      const rowTotal = parseFloat($(this).find("td:nth-child(5)").text().replace("$", ""));
+      const rowTotal = parseFloat($(this).find("td:nth-child(5)").text().replace("Rs", ""));
       if (!isNaN(rowTotal)) {
         total += rowTotal;
       }
     });
-    $("#cart-content th:nth-child(5)").text("$" + total.toFixed(2));
-    $(".tbl-full th:nth-child(6)").text("$" + total.toFixed(2));
+    $("#cart-content th:nth-child(5)").text("Rs" + total.toFixed(2));
+    $(".tbl-full th:nth-child(6)").text("Rs" + total.toFixed(2));
   }
 });
