@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steak Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e74c3c;
+        }
+
+        .steak-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .steak-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .steak-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 700px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .steak-item img {
+            width: 100%;
+            border-radius: 10px;
+            height: auto;
+        }
+
+        .steak-item h3 {
+            margin-top: 15px;
+            font-size: 24px;
+            color: #e74c3c;
+        }
+
+        .steak-item p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #27ae60;
+            margin-top: 10px;
+        }
+
+        .add-to-cart {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #c0392b;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: #555;
+        }
+
+        .footer {
+            background: black;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                padding-top: 10px;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .steak-grid {
+                width: 90%;
+            }
+
+            .steak-item {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Foodie</div>
+        <ul class="nav-links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="category.html">Categories</a></li>
+            <li><a href="#">Foods</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="steak-section">
+        <h2 style="margin-bottom: 40px; font-size: 36px; color: #333;">Steak Menu</h2>
+        <div class="steak-grid">
+            <div class="steak-item">
+                <img src="https://source.unsplash.com/700x400/?ribeyesteak" alt="Ribeye Steak">
+                <h3>Ribeye Steak</h3>
+                <p>Rich and juicy, marbled with fat for extra flavor.</p>
+                <p class="price">$25.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="steak-item">
+                <img src="https://source.unsplash.com/700x400/?sirloinsteak" alt="Sirloin Steak">
+                <h3>Sirloin Steak</h3>
+                <p>Lean and flavorful, grilled to perfection.</p>
+                <p class="price">$22.49</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="steak-item">
+                <img src="https://source.unsplash.com/700x400/?tbonesteak" alt="T-Bone Steak">
+                <h3>T-Bone Steak</h3>
+                <p>Combination of tenderloin and strip steak.</p>
+                <p class="price">$28.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="steak-item">
+                <img src="https://source.unsplash.com/700x400/?filetmignon" alt="Filet Mignon">
+                <h3>Filet Mignon</h3>
+                <p>Most tender cut, buttery and delicate.</p>
+                <p class="price">$32.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="steak-item">
+                <img src="https://source.unsplash.com/700x400/?newyorkstrip" alt="New York Strip">
+                <h3>New York Strip</h3>
+                <p>Thick and juicy with a great balance of flavor.</p>
+                <p class="price">$24.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="steak-item">
+                <img src="https://source.unsplash.com/700x400/?porterhousesteak" alt="Porterhouse Steak">
+                <h3>Porterhouse Steak</h3>
+                <p>Large cut with both tenderloin and strip steak portions.</p>
+                <p class="price">$30.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <a href="category.html" class="back-button">← Back to Categories</a>
+    </section>
+
+    <footer class="footer">
+        <p>All rights reserved. Design by <span style="color: red;">Code Arcade</span></p>
+    </footer>
+
+</body>
+</html>

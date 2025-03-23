@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e74c3c;
+        }
+
+        .pizza-section {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .pizza-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pizza-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 700px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .pizza-item img {
+            width: 100%;
+            border-radius: 10px;
+            height: auto;
+        }
+
+        .pizza-item h3 {
+            margin-top: 15px;
+            font-size: 24px;
+            color: #e74c3c;
+        }
+
+        .pizza-item p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #27ae60;
+            margin-top: 10px;
+        }
+
+        .add-to-cart {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #c0392b;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: #555;
+        }
+
+        .footer {
+            background: black;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                padding-top: 10px;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .pizza-grid {
+                width: 90%;
+            }
+
+            .pizza-item {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Foodie</div>
+        <ul class="nav-links">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="category.html">Categories</a></li>
+            <li><a href="#">Foods</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="pizza-section">
+        <h2 style="margin-bottom: 40px; font-size: 36px; color: #333;">Pizza Menu</h2>
+        <div class="pizza-grid">
+            <div class="pizza-item">
+                <img src="https://source.unsplash.com/700x400/?margherita-pizza" alt="Margherita Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Classic cheese and tomato pizza with fresh basil.</p>
+                <p class="price">$8.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="pizza-item">
+                <img src="https://source.unsplash.com/700x400/?pepperoni-pizza" alt="Pepperoni Pizza">
+                <h3>Pepperoni Pizza</h3>
+                <p>Loaded with spicy pepperoni and melted cheese.</p>
+                <p class="price">$9.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="pizza-item">
+                <img src="https://source.unsplash.com/700x400/?bbq-chicken-pizza" alt="BBQ Chicken Pizza">
+                <h3>BBQ Chicken Pizza</h3>
+                <p>Smoky BBQ sauce, grilled chicken, and cheese.</p>
+                <p class="price">$10.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="pizza-item">
+                <img src="https://source.unsplash.com/700x400/?veggie-pizza" alt="Veggie Pizza">
+                <h3>Veggie Pizza</h3>
+                <p>Loaded with fresh vegetables and mozzarella cheese.</p>
+                <p class="price">$9.49</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="pizza-item">
+                <img src="https://source.unsplash.com/700x400/?meat-lovers-pizza" alt="Meat Lovers Pizza">
+                <h3>Meat Lovers Pizza</h3>
+                <p>A combination of sausage, bacon, ham, and pepperoni.</p>
+                <p class="price">$11.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="pizza-item">
+                <img src="https://source.unsplash.com/700x400/?hawaiian-pizza" alt="Hawaiian Pizza">
+                <h3>Hawaiian Pizza</h3>
+                <p>Ham, pineapple, and melted cheese on a crispy crust.</p>
+                <p class="price">$10.49</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        <a href="category.html" class="back-button">← Back to Categories</a>
+    </section>
+
+    <footer class="footer">
+        <p>All rights reserved. Design by <span style="color: red;">Code Arcade</span></p>
+    </footer>
+
+</body>
+</html>
